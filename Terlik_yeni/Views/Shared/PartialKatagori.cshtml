@@ -1,0 +1,39 @@
+﻿@using TerlikEntities;
+@using Terlik_yeni.Models;
+@using TerlikBll;
+
+
+
+
+@{
+    List<Category> liste = CacheHelper.KategoriCache();
+}
+
+
+<p class="lead">Kategoriler</p>
+<div class="list-group">
+    <a href="/Home/Product" class="list-group-item"><span class="glyphicon glyphicon-chevron-right"></span>Tümü</a>
+    @foreach (var kategori in liste)
+    {
+        <a href="/Home/Kategori/@kategori.Id " class="list-group-item"></a>// tıkladığımız kategorilere ait makaleleri getirmesini istedik bunun için ayrı bir action yazılacak ve ıd lerinden ayırt edilecek
+    }
+
+</div>
+
+@*<div class="col-lg-3">
+    <h1 class="h2 pb-4">Kategoriler</h1>
+    <ul class="list-unstyled templatemo-accordion">
+        <li class="pb-3">
+            <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
+                Çeşitler
+                <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
+            </a>
+            <ul class="collapse show list-unstyled pl-3">
+                <li><a class="text-decoration-none" href="#">Erkek</a></li>
+                <li><a class="text-decoration-none" href="#">Kadın</a></li>
+                <li><a class="text-decoration-none" href="#">Çocuk</a></li>
+            </ul>
+        </li>
+
+    </ul>
+</div>*@

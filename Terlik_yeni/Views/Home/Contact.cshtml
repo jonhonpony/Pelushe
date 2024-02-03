@@ -1,0 +1,72 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<div class="container-fluid bg-light py-5">
+    <div class="col-md-6 m-auto text-center">
+        <h1 class="h1">Contact Us</h1>
+        <p>
+            Proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Lorem ipsum dolor sit amet.
+        </p>
+    </div>
+</div>
+
+    <div class="googlemap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3007.0691210719874!2d28.965797376044563!3d41.089336371339314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDA1JzIxLjYiTiAyOMKwNTgnMDYuMSJF!5e0!3m2!1str!2str!4v1706112488789!5m2!1str!2str" width="1519" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+
+<!-- Ena Map -->
+<!-- Start Contact -->
+<div class="container py-5">
+    <div class="row py-5">
+        <form class="col-md-9 m-auto" action="../Home/Contact" method="post" role="form">
+            <div class="row">
+                <div class="form-group col-md-6 mb-3">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control mt-1" id="name" name="Name" placeholder="Name" required>
+                    @if (ViewData.ModelState.TryGetValue("Name", out var nameErrors) && nameErrors.Errors.Count > 0)
+                    {
+                        <div class="text-danger">
+                            @nameErrors.Errors[0].ErrorMessage
+                        </div>
+                    }
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control mt-1" id="email" name="Email" placeholder="Email" required>
+                    @if (ViewData.ModelState.TryGetValue("Email", out var emailErrors) && emailErrors.Errors.Count > 0)
+                    {
+                        <div class="text-danger">
+                            @emailErrors.Errors[0].ErrorMessage
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="subject">Subject:</label>
+                <input type="text" class="form-control mt-1" id="subject" name="Subject" placeholder="Subject" required>
+                @if (ViewData.ModelState.TryGetValue("Subject", out var subjectErrors) && subjectErrors.Errors.Count > 0)
+                {
+                    <div class="text-danger">
+                        @subjectErrors.Errors[0].ErrorMessage
+                    </div>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="body">Message:</label>
+                <textarea class="form-control mt-1" id="body" name="Body" placeholder="Message" rows="8"></textarea>
+            </div>
+            <div class="row">
+                <div class="col text-end mt-2">
+                    <button type="submit" class="btn btn-success btn-lg px-3">Let’s Talk</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- End Contact -->
+
+

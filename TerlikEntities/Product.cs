@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TerlikEntities
+{
+    public class Product
+    {
+        public int ProductId { get; set; }
+        public string Name { get; set; }
+  
+        public string ImageUrl { get; set; } // Resim URL'si veya base64 verisi
+        public int CategoryId { get; set; }
+
+        public virtual Category Category { get; set; }
+
+
+    }
+}
