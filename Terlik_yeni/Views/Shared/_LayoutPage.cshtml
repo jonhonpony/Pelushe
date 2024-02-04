@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="~/css/templatemo.css">
     <link rel="stylesheet" href="~/css/custom.css">
     <link href="~/css/modal.css" rel="stylesheet" />
+    <link href="~/css/submenu.css" rel="stylesheet" />
 
     <!-- Load font stilleri -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
@@ -38,67 +39,70 @@
     </nav>
     <!-- Close Top Nav -->
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light shadow" style="background-color: #ffffff;">
-        <a class="inline-flex items-center isolate" href="../Home/index">
-            <img src="~/img/logo.png" alt="Logo">
-        </a>
-        <div class="container d-flex justify-content-between align-items-center">
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <header>
 
-            <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
-                <div class="flex-fill">
-                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="womenDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Kadın
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end rounded-0" aria-labelledby="womenDropdown">
-                                <a class="dropdown-item" href="@Url.Action("womenSummer","Product")">Yaz Terliği</a>
-                                <a class="dropdown-item" href="#">Ev Terliği</a>
-                            </div>
-                        </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="menDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Erkek
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end rounded-0" aria-labelledby="menDropdown">
-                                <a class="dropdown-item" href="#">Yaz Terliği</a>
-                                <a class="dropdown-item" href="#">Ev Terliği</a>
-                            </div>
-                        </li>
+        <nav class="navbar navbar-expand-lg navbar-light shadow" style="background-color: #ffffff;">
+            <a class="inline-flex items-center isolate" href="../Home/index">
+                <img src="~/img/logo.png" alt="Logo">
+            </a>
+            <div class="minimal-menu container d-flex justify-content-between align-items-center">
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="childrenDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Çocuk
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end rounded-0" aria-labelledby="childrenDropdown">
-                                <a class="dropdown-item" href="#">Yaz Terliği</a>
-                                <a class="dropdown-item" href="#">Ev Terliği</a>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                    <div class="flex-fill">
+                        <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+
+                            <li>
+                                <a href="#">Kadın</a>
+                                <ul class="sub-menu">
+                                    <li><a href="@Url.Action("womenSummer","Product")"> Yaz Terliği</a></li>
+                                    <li><a href="@Url.Action("menHome","Product")"> Ev Terliği</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#">Erkek</a>
+                                <ul class="sub-menu">
+                                    <li><a href="@Url.Action("menSummer","Product")"> Yaz Terliği</a></li>
+                                    <li><a href="@Url.Action("menHome","Product")"> Ev Terliği</a></li>
+
+                                </ul>
+                            </li>
+
+
+                            <li>
+                                <a href="#">Çocuk</a>
+                                <ul class="sub-menu">
+                                    <li><a href="@Url.Action("menSummer","Product")">Yaz Terliği</a></li>
+                                    <li><a href="@Url.Action("menHome","Product")">Ev Terliği</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
+                <li class="nav-item" style="list-style-type: none;">
+                    <a class="nav-link" href="../Home/Contact">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item" style="list-style-type: none;">
+                    <a class="nav-link" href="../Home/About">
+                        <i class="fa fa-info-circle"></i>
+                    </a>
+                </li>
             </div>
 
-            <li class="nav-item" style="list-style-type: none;">
-                <a class="nav-link" href="../Home/Contact">
-                    <i class="fa fa-envelope"></i>
-                </a>
-            </li>
-
-            <li class="nav-item" style="list-style-type: none;">
-                <a class="nav-link" href="../Home/About">
-                    <i class="fa fa-info-circle"></i>
-                </a>
-            </li>
-        </div>
 
 
-
-    </nav>
+        </nav>
+    </header>
     <!-- Close Header -->
     <!-- Modal -->
     <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
