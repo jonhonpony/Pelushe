@@ -24,10 +24,10 @@ namespace TerlikCommon
 
 
 
-            var mail = "atakan1234510@gmail.com";
-            var pw = "ooyxbmjigrsbytzx";
+            var mail = "peluche@groupsade.com";
+            var pw = "Peluche2020++";
 
-            var client = new System.Net.Mail.SmtpClient("smtp.gmail.com", 587)
+            var client = new SmtpClient("smtp.groupsade.com", 465)
             {
                 Credentials = new System.Net.NetworkCredential(mail, pw),
                 EnableSsl = true

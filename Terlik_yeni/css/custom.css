@@ -43,7 +43,7 @@
     min-height: 130px;
 }
 
-    .feature-item:before {
+    .minicons {
         left: 0;
         position: absolute;
         top: 10px;

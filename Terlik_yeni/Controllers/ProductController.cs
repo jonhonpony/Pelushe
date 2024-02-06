@@ -19,13 +19,13 @@ namespace Terlik_yeni.Controllers
             return View(model);
         }
 
-        public ActionResult womenSummer()
+        public ActionResult womenHome()
         {
             DatabaseContext db = new DatabaseContext();
             var model = db.Products.Where(x => x.CategoryId == 1).ToList();
             return View(model);
         }
-        public ActionResult womenHome()
+        public ActionResult womenSummer()
         {
             DatabaseContext db = new DatabaseContext();
             var model = db.Products.Where(x => x.CategoryId == 2).ToList();
