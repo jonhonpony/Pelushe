@@ -9,6 +9,8 @@ using Terlik_yeni.Models;
 using Microsoft.Ajax.Utilities;
 using TerlikEntities;
 using TerlikDAL;
+using System.Resources;
+using System.Reflection;
 
 
 
@@ -21,7 +23,7 @@ namespace Terlik_yeni.Controllers
 
         public ActionResult index()
         {
-            
+        
             return View();
         }
 
@@ -47,7 +49,7 @@ namespace Terlik_yeni.Controllers
                 var emailSender = new EmailSender();
 
                 // Call the SendEmailAsync method to send the email
-                await emailSender.SendEmailAsync(model.Name, model.Email, model.Subject, model.Body);
+                await emailSender.SendEmailAsync(model.Email, model.Subject, model.Body);
 
                 // Other code for your contact view action
 
@@ -86,7 +88,20 @@ namespace Terlik_yeni.Controllers
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
+        public ActionResult Change(string LanguageAbbrevation)
+        {
+            if (LanguageAbbrevation != null)
+            {
+                System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture(LanguageAbbrevation);
+                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(LanguageAbbrevation);
+            }
 
+            HttpCookie cookie = new HttpCookie("Language");
+            cookie.Value = LanguageAbbrevation;
+            Response.Cookies.Add(cookie);
+
+            return RedirectToAction("index");
+        }
 
 
 

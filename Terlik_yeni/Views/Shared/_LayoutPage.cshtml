@@ -56,67 +56,71 @@
                         <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                             <li class="nav-item" style="list-style-type: none;">
                                 <a class="nav-link" href="../Home/Contact">
-                                    İletişim
+                                    @Terlik_yeni.Resources.HomeTexts.Contact
                                 </a>
                             </li>
 
                             <li class="nav-item" style="list-style-type: none;">
                                 <a class="nav-link" href="../Home/About">
-                                    Hakkımızda
+                                    @Terlik_yeni.Resources.HomeTexts.About
                                 </a>
                             </li>
                             <li class="nav-item" style="list-style-type: none;">
-                                <a class="nav-link" href="../Home/Products">
-                                    Ürünler
+                                <a class="nav-link" href="#">
+                                    @Terlik_yeni.Resources.HomeTexts.Products
                                 </a>
 
                                 <ul class="sub-menu">
 
                                     <li>
-                                        <a href="#">Kadın</a>
+                                        <a href="#">@Terlik_yeni.Resources.HomeTexts.ProductWomen</a>
                                         <ul class="sub-menu">
-                                            <li><a href="@Url.Action("womenHome","Product")"> Ev Ayakkabısı</a></li>
-                                            <li><a href="#"> Deniz Ayakkabısı</a></li>
-                                            <li><a href="#"> Terlik</a></li>
-                                            <li><a href="#"> Gondol</a></li>
-                                            <li><a href="#"> Ev Botu</a></li>
-                                            <li><a href="#"> Panduf</a></li>
+                                            <li><a href="@Url.Action("womenHomeBoots","Product")"> @Terlik_yeni.Resources.HomeTexts.HomeBoots</a></li>
+                                            <li><a href="@Url.Action("womenSummer","Product")"> @Terlik_yeni.Resources.HomeTexts.Sea</a></li>
+                                            <li><a href="@Url.Action("womenSlipper","Product")"> @Terlik_yeni.Resources.HomeTexts.Slipper</a></li>
+                                            <li><a href="@Url.Action("womenGondol","Product")"> @Terlik_yeni.Resources.HomeTexts.Gondol</a></li>                               
+                                            <li><a href="@Url.Action("womenHome","Product")"> @Terlik_yeni.Resources.HomeTexts.HomeShoes</a></li>
 
 
                                         </ul>
                                     </li>
 
                                     <li>
-                                        <a href="#">Erkek</a>
+                                        <a href="#">@Terlik_yeni.Resources.HomeTexts.ProductMen</a>
                                         <ul class="sub-menu">
-                                            <li><a href="#"> Deniz Ayakkabısı</a></li>
-                                            <li><a href="@Url.Action("menHome","Product")"> Ev Ayakkabısı</a></li>
-                                            <li><a href="#"> Terlik</a></li>
-                                            <li><a href="#"> Gondol</a></li>
-                                            <li><a href="#"> Ev Botu</a></li>
-                                            <li><a href="#"> Panduf</a></li>
-                                            
+                                            <li><a href="#"> @Terlik_yeni.Resources.HomeTexts.Sea</a></li>
+                                            <li><a href="@Url.Action("menHome","Product")">@Terlik_yeni.Resources.HomeTexts.HomeBoots</a></li>
+                                            <li><a href="#"> @Terlik_yeni.Resources.HomeTexts.Slipper</a></li>
+                                            <li><a href="#"> @Terlik_yeni.Resources.HomeTexts.Gondol</a></li>                                  
+                                            <li><a href="#"> @Terlik_yeni.Resources.HomeTexts.HomeShoes</a></li>
+
 
                                         </ul>
                                     </li>
 
 
                                     <li>
-                                        <a href="#">Çocuk</a>
+                                        <a href="#">@Terlik_yeni.Resources.HomeTexts.ProductChild</a>
                                         <ul class="sub-menu">
-                                            <li><a href="#">Ev Ayakkabısı</a></li>
-                                            <li><a href="#">Ev Botu</a></li>
-                                            <li><a href="#">Deniz Ayakkabısı</a></li>
+                                            <li><a href="#">@Terlik_yeni.Resources.HomeTexts.HomeShoes</a></li>
+                                            <li><a href="#">@Terlik_yeni.Resources.HomeTexts.HomeBoots</a></li>
+                                            <li><a href="#">@Terlik_yeni.Resources.HomeTexts.Sea</a></li>
 
                                         </ul>
                                     </li>
                                 </ul>
 
 
-                            </li>                                                                 
+                            </li>
 
                         </ul>
                     </div>
+                    <ul>
+                       <li>@Html.ActionLink("English", "Change", "Home", new { LanguageAbbrevation = "en-US" }, null)  </li>
+                         <li>@Html.ActionLink("Turkish", "Change", "Home", new { LanguageAbbrevation = "tr" }, null)  </li>
+
+                    </ul>
+
                 </div>
 
                 

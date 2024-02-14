@@ -8,7 +8,7 @@ namespace TerlikCommon
 {
     public interface IEmailSender
     {
-        Task SendEmailAsync(string name, string email, string subject, string body);
+        Task SendEmailAsync( string email, string subject, string body);
 
     }
 }

@@ -12,7 +12,7 @@
 <div class="container py-5">
     <div class="row">
         <div class="col-12 text-center">
-            <h2 style="color: #205890">Erkek Ev Ayakkabıları</h2>
+            <h2 style="color: #205890">Erkek Yaz Terlikleri</h2>
         </div>
         <br />
         <br />
@@ -22,12 +22,12 @@
         <div class="col-lg-9">
             <div class="row">
                 @{
-                    var directoryPath = Server.MapPath("~/img/resim/men/HomeShoes/");
+                    var directoryPath = Server.MapPath("~/img/resim/men/SeaShoes/");
                     var fileCount = Directory.GetFiles(directoryPath, "*.jpg").Length;
 
                     for (int i = 1; i <= fileCount; i++)
                     {
-                        string imagePath = $"../img/resim/woman/Slipper/men{i}.jpg";
+                        string imagePath = $"../img/resim/woman/SeaShoes/men{i}.jpg";
                         <div class="col-md-4">
                             <div class="card mb-4 product-wap rounded-0">
                                 <div class="card rounded-0">
@@ -97,7 +97,6 @@
             });
         });
     </script>
-
 
 
 

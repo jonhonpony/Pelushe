@@ -31,18 +31,75 @@ namespace Terlik_yeni.Controllers
             var model = db.Products.Where(x => x.CategoryId == 2).ToList();
             return View(model);
         }
-        public ActionResult menSummer()
+        public ActionResult womenHomeBoots()
         {
             DatabaseContext db = new DatabaseContext();
-            var model = db.Products.Where(x => x.CategoryId == 3).ToList();
+            var model = db.Products.Where(x => x.CategoryId == 2).ToList();
             return View(model);
         }
+        public ActionResult womenGondol()
+        {
+            DatabaseContext db = new DatabaseContext();
+            var model = db.Products.Where(x => x.CategoryId == 2).ToList();
+            return View(model);
+        }
+        public ActionResult womenPanduf()
+        {
+            DatabaseContext db = new DatabaseContext();
+            var model = db.Products.Where(x => x.CategoryId == 2).ToList();
+            return View(model);
+        }
+        public ActionResult womenSlipper()
+        {
+            DatabaseContext db = new DatabaseContext();
+            var model = db.Products.Where(x => x.CategoryId == 2).ToList();
+            return View(model);
+        }
+
+
+
+        //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
         public ActionResult menHome()
         {
             DatabaseContext db = new DatabaseContext();
-            var model = db.Products.Where(x => x.CategoryId == 4).ToList();
+            var model = db.Products.Where(x => x.CategoryId == 1).ToList();
             return View(model);
         }
+        public ActionResult menSummer()
+        {
+            DatabaseContext db = new DatabaseContext();
+            var model = db.Products.Where(x => x.CategoryId == 2).ToList();
+            return View(model);
+        }
+        public ActionResult menHomeBoots()
+        {
+            DatabaseContext db = new DatabaseContext();
+            var model = db.Products.Where(x => x.CategoryId == 2).ToList();
+            return View(model);
+        }
+        public ActionResult menGondol()
+        {
+            DatabaseContext db = new DatabaseContext();
+            var model = db.Products.Where(x => x.CategoryId == 2).ToList();
+            return View(model);
+        }
+        
+        public ActionResult menSlipper()
+        {
+            DatabaseContext db = new DatabaseContext();
+            var model = db.Products.Where(x => x.CategoryId == 2).ToList();
+            return View(model);
+        }
+
+
+        //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
         public ActionResult childrenSummer()
         {
             DatabaseContext db = new DatabaseContext();
@@ -50,6 +107,12 @@ namespace Terlik_yeni.Controllers
             return View(model);
         }
         public ActionResult childrenHome()
+        {
+            DatabaseContext db = new DatabaseContext();
+            var model = db.Products.Where(x => x.CategoryId == 6).ToList();
+            return View(model);
+        }
+        public ActionResult childrenHomeBoots()
         {
             DatabaseContext db = new DatabaseContext();
             var model = db.Products.Where(x => x.CategoryId == 6).ToList();
