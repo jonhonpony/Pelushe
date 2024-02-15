@@ -210,4 +210,7 @@
   <data name="SlipperHeader" xml:space="preserve">
     <value>Terlikleri</value>
   </data>
+  <data name="tel" xml:space="preserve">
+    <value>+90 553 571 12 05</value>
+  </data>
 </root>

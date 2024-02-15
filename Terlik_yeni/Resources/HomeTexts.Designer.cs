@@ -338,5 +338,14 @@ namespace Terlik_yeni.Resources {
                 return ResourceManager.GetString("SlipperHeader", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to +90 553 571 12 05.
+        /// </summary>
+        public static string tel {
+            get {
+                return ResourceManager.GetString("tel", resourceCulture);
+            }
+        }
     }
 }

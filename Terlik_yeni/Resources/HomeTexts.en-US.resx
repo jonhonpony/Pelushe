@@ -210,4 +210,7 @@
   <data name="SlipperHeader" xml:space="preserve">
     <value>Slippers</value>
   </data>
+  <data name="tel" xml:space="preserve">
+    <value>+90 530 976 83 05</value>
+  </data>
 </root>
