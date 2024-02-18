@@ -22,12 +22,12 @@
         <div class="col-lg-9">
             <div class="row">
                 @{
-                    var directoryPath = Server.MapPath("~/img/resim/men/Gondol/");
+                    var directoryPath = Server.MapPath("~/img/resim/erkek/Gondol/");
                     var fileCount = Directory.GetFiles(directoryPath, "*.jpg").Length;
 
                     for (int i = 1; i <= fileCount; i++)
                     {
-                        string imagePath = $"../img/resim/woman/Gondol/men{i}.jpg";
+                        string imagePath = $"../img/resim/erkek/Gondol/men{i}.jpg";
                         <div class="col-md-4">
                             <div class="card mb-4 product-wap rounded-0">
                                 <div class="card rounded-0">

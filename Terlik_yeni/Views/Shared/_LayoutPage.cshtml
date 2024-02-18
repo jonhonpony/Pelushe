@@ -88,11 +88,11 @@
                                     <li>
                                         <a href="#">@Terlik_yeni.Resources.HomeTexts.ProductMen</a>
                                         <ul class="sub-menu">
-                                            <li><a href="#"> @Terlik_yeni.Resources.HomeTexts.Sea</a></li>
-                                            <li><a href="@Url.Action("menHome","Product")">@Terlik_yeni.Resources.HomeTexts.HomeBoots</a></li>
-                                            <li><a href="#"> @Terlik_yeni.Resources.HomeTexts.Slipper</a></li>
-                                            <li><a href="#"> @Terlik_yeni.Resources.HomeTexts.Gondol</a></li>                                  
-                                            <li><a href="#"> @Terlik_yeni.Resources.HomeTexts.HomeShoes</a></li>
+                                            <li><a href="@Url.Action("menSummer","Product")"> @Terlik_yeni.Resources.HomeTexts.Sea</a></li>
+                                            <li><a href="@Url.Action("menHomeBoots","Product")">@Terlik_yeni.Resources.HomeTexts.HomeBoots</a></li>
+                                            <li><a href="@Url.Action("menSlipper","Product")"> @Terlik_yeni.Resources.HomeTexts.Slipper</a></li>
+                                            <li><a href="@Url.Action("menGondol","Product")"> @Terlik_yeni.Resources.HomeTexts.Gondol</a></li>                                  
+                                            <li><a href="@Url.Action("menHome","Product")"> @Terlik_yeni.Resources.HomeTexts.HomeShoes</a></li>
 
 
                                         </ul>
@@ -102,9 +102,9 @@
                                     <li>
                                         <a href="#">@Terlik_yeni.Resources.HomeTexts.ProductChild</a>
                                         <ul class="sub-menu">
-                                            <li><a href="#">@Terlik_yeni.Resources.HomeTexts.HomeShoes</a></li>
-                                            <li><a href="#">@Terlik_yeni.Resources.HomeTexts.HomeBoots</a></li>
-                                            <li><a href="#">@Terlik_yeni.Resources.HomeTexts.Sea</a></li>
+                                            <li><a href="@Url.Action("childrenHome","Product")">@Terlik_yeni.Resources.HomeTexts.HomeShoes</a></li>
+                                            <li><a href="@Url.Action("childrenHomeBoots","Product")">@Terlik_yeni.Resources.HomeTexts.HomeBoots</a></li>
+                                            <li><a href="@Url.Action("childrenSummer","Product")">@Terlik_yeni.Resources.HomeTexts.Sea</a></li>
 
                                         </ul>
                                     </li>
@@ -115,12 +115,19 @@
 
                         </ul>
                     </div>
-                    <ul>
-                       <li>@Html.ActionLink("English", "Change", "Home", new { LanguageAbbrevation = "en-US" }, null)  </li>
-                         <li>@Html.ActionLink("Turkish", "Change", "Home", new { LanguageAbbrevation = "tr" }, null)  </li>
-
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="@Url.Action("Change", "Home", new { LanguageAbbrevation = "en-US" })">
+                                <img src="~/img/minicons/United-Kingdom.png" alt="English" width="24" height="16" />
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="@Url.Action("Change", "Home", new { LanguageAbbrevation = "tr" })">
+                                <img src="~/img/minicons/Turkey.png" alt="Turkish" width="24" height="16" />
+                            </a>
+                        </li>
                     </ul>
-
                 </div>
 
                 

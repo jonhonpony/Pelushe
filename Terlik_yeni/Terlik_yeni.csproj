@@ -533,14 +533,16 @@
     <Content Include="img\minicons\3.png" />
     <Content Include="img\minicons\4.png" />
     <Content Include="img\minicons\5.png" />
+    <Content Include="img\minicons\Turkey.png" />
+    <Content Include="img\minicons\United-Kingdom.png" />
     <Content Include="img\resim\erkek\HomeShoes\men1.jpg" />
     <Content Include="img\resim\erkek\HomeShoes\men2.jpg" />
     <Content Include="img\resim\erkek\HomeBoots\men1.png" />
     <Content Include="img\resim\woman\HomeShoes\women1.jpg" />
     <Content Include="img\resim\woman\HomeShoes\women2.jpg" />
-    <Content Include="img\resim\çocuk\1\kid.png" />
-    <Content Include="img\resim\çocuk\2\kid.png" />
-    <Content Include="img\resim\çocuk\3\kid.png" />
+    <Content Include="img\resim\çocuk\HomeShoes\kid1.jpg" />
+    <Content Include="img\resim\çocuk\HomeShoes\kid2.jpg" />
+    <Content Include="img\resim\çocuk\HomeShoes\kid3.jpg" />
     <Content Include="js\bootstrap.bundle.min.js" />
     <Content Include="js\custom.js" />
     <Content Include="js\jquery-1.11.0.min.js" />
@@ -634,6 +636,9 @@
     <Content Include="Views\Product\menHomeBoots.cshtml" />
     <Content Include="Views\Product\menGondol.cshtml" />
     <Content Include="Views\Product\menSlipper.cshtml" />
+    <Content Include="Views\Product\childrenSummer.cshtml" />
+    <Content Include="Views\Product\childrenHome.cshtml" />
+    <Content Include="Views\Product\childrenHomeBoots.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -644,6 +649,8 @@
     <Folder Include="img\resim\woman\HomeBoots\" />
     <Folder Include="img\resim\woman\SeaShoes\" />
     <Folder Include="img\resim\woman\Slipper\" />
+    <Folder Include="img\resim\çocuk\HomeBoots\" />
+    <Folder Include="img\resim\çocuk\SeaShoes\" />
     <Folder Include="services\" />
   </ItemGroup>
   <ItemGroup>
