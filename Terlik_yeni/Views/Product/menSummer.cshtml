@@ -23,27 +23,34 @@
             <div class="row">
                 @{
                     var directoryPath = Server.MapPath("~/img/resim/erkek/SeaShoes/");
-                    var fileCount = Directory.GetFiles(directoryPath, "*.jpg").Length;
-
-                    for (int i = 1; i <= fileCount; i++)
+                    if (Directory.Exists(directoryPath))
                     {
-                        string imagePath = $"../img/resim/erkek/SeaShoes/men{i}.jpg";
-                        <div class="col-md-4">
-                            <div class="card mb-4 product-wap rounded-0">
-                                <div class="card rounded-0">
-                                    <img class="card-img rounded-0 img-fluid product-image" src="@imagePath">
-                                    <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                        <ul class="list-unstyled">
-                                            <li><button class="btn btn-success text-white mt-2 view-button"><i class="far fa-eye"></i></button></li>
-                                        </ul>
+                        var fileCount = Directory.GetFiles(directoryPath, "*.jpg").Length;
+
+                        for (int i = 1; i <= fileCount; i++)
+                        {
+                                string imagePath = $"../img/resim/erkek/SeaShoes/men{i}.jpg";
+                            <div class="col-md-4">
+                                <div class="card mb-4 product-wap rounded-0">
+                                    <div class="card rounded-0">
+                                        <img class="card-img rounded-0 img-fluid product-image" src="@imagePath">
+                                        <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                            <ul class="list-unstyled">
+                                                <li><button class="btn btn-success text-white mt-2 view-button"><i class="far fa-eye"></i></button></li>
+                                            </ul>
+                                        </div>
                                     </div>
+
+
                                 </div>
-
-
                             </div>
-                        </div>
+                        }
                     }
-                }
+                        else
+                        {
+                            <div>No images found</div>
+                        }
+                    }
             </div>
         </div>
 

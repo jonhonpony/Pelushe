@@ -21,7 +21,7 @@ namespace Terlik_yeni.Controllers
     { 
       
 
-        public ActionResult index()
+        public ActionResult Index()
         {
         
             return View();

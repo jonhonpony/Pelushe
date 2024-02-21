@@ -23,11 +23,13 @@
             <div class="row">
                 @{
                     var directoryPath = Server.MapPath("~/img/resim/woman/Gondol/");
-                    var fileCount = Directory.GetFiles(directoryPath, "*.jpg").Length;
-
-                    for (int i = 1; i <= fileCount; i++)
+                    if (Directory.Exists(directoryPath))
                     {
-                        string imagePath = $"../img/resim/woman/Gondol/women{i}.jpg";
+                        var fileCount = Directory.GetFiles(directoryPath, "*.jpg").Length;
+
+                        for (int i = 1; i <= fileCount; i++)
+                        {
+                            string imagePath = $"../img/resim/woman/Gondol/women{i}.jpg";
                         <div class="col-md-4">
                             <div class="card mb-4 product-wap rounded-0">
                                 <div class="card rounded-0">
@@ -42,8 +44,13 @@
 
                             </div>
                         </div>
+                            }
+                        }
+                    else
+                    {
+                        <div>No images found</div>
                     }
-                }
+                    }
             </div>
         </div>
 

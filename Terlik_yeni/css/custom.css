@@ -96,3 +96,28 @@
 .center-features .feature-item.feature-item-bg h4 {
     margin-top: 20px;
 }
+
+body-working {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.center-di-working {
+    text-align: center;
+}
+
+.styled-text-working {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Yazý rengi */
+}
+
+/* Ýsteðe baðlý: Görsel için stiller */
+img-working {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px; /* Yazýdan biraz boþluk býrakmak için */
+}
